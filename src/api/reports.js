@@ -102,6 +102,7 @@ router.get('/', async (req, res) => {
     healthy: report.healthy
   }));
 
+  console.log(dailyReport);
   return res.json(dailyReport);
 });
 
