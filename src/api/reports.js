@@ -97,7 +97,7 @@ router.get('/', async (req, res) => {
     date: moment(report.date).format('YYYY-MM-DD'),
     city: report.reportInformations.city,
     latitude: report.reportInformations.lat,
-    longitude: report.reportInformations.lng,
+    longitude: report.reportInformations.long,
     sicks: report.sicks,
     healthy: report.healthy
   }));
