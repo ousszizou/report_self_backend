@@ -96,13 +96,12 @@ router.get('/', async (req, res) => {
   const dailyReport = reports.map((report) => ({
     date: moment(report.date).format('YYYY-MM-DD'),
     city: report.reportInformations.city,
-    latitude: report.reportInformations.lat,
+    lat: report.reportInformations.lat,
     longitude: report.reportInformations.long,
     sicks: report.sicks,
     healthy: report.healthy
   }));
 
-  console.log(dailyReport);
   return res.json(dailyReport);
 });
 
