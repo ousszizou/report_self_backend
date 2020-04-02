@@ -18,7 +18,10 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-mongoose.connect(process.env.DB_URI, { useNewUrlParser: true });
+mongoose.connect(process.env.DB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 
 app.get('/', (req, res) => {
